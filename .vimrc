@@ -72,6 +72,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'fatih/vim-go'
+Plugin 'guns/vim-clojure-static'
 
 call vundle#end()
 filetype plugin indent on
