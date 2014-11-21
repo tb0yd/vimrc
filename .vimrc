@@ -62,6 +62,7 @@ Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'gregsexton/gitv'
 Plugin 'bling/vim-airline'
 Plugin 'wincent/Command-T'
+Plugin 'scrooloose/syntastic'
 
 " syntax files
 Plugin 'pangloss/vim-javascript'
@@ -69,19 +70,21 @@ Plugin 'tpope/vim-markdown'
 Plugin 'voithos/vim-python-syntax'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
 
 " checksyntax config
-let g:checksyntax#auto_mode = 0
+" let g:checksyntax#auto_mode = 0
 
 " taglist config
 let g:Tlist_Use_Right_Window = 1
 
 " airline config
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " ctrl-p config
 let g:ctrlp_working_path_mode = 'c'
@@ -99,13 +102,18 @@ set nu
 set nofoldenable
 
 " omg automatic comment insertion is the worst
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " expand tabs to 4 spaces
-set shiftwidth=4
-set tabstop=4
-set smarttab
+" set shiftwidth=4
+" set tabstop=4
+" set smarttab
 set expandtab
+
+" filetype specific tabbing
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
 " faster tab navigation
 nnoremap <S-tab> :tabprevious<CR>
@@ -120,9 +128,9 @@ set ignorecase
 set smartcase
 
 " disable backups
-set nobackup
-set nowritebackup
-set noswapfile
+" set nobackup
+" set nowritebackup
+" set noswapfile
 
 " disable annoying beep on errors
 set noerrorbells
@@ -133,7 +141,8 @@ endif
 " font options
 set background=dark
 set t_Co=256
-colorscheme smyck
+colorscheme slate
+set guifont=Monaco:h13
 
 " keep at least 5 lines below the cursor
 set scrolloff=5
@@ -198,20 +207,20 @@ nnoremap <leader>w :tabclose<CR>
 nnoremap ; :
 
 " also autosave when going to insert mode
-inoremap kj <Esc>:w<CR>
+" inoremap kj <Esc>:w<CR>
 
 " more logical vertical navigation
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
 " make copy/pasting nice
-function! ToggleMouse()
-    if &mouse == 'a'
-        set mouse=r
-        set nonu
-    else
-        set mouse=a
-        set nu
-    endif
-endfunction
-nnoremap <leader>m :call ToggleMouse()<CR>
+" function! ToggleMouse()
+"     if &mouse == 'a'
+"         set mouse=r
+"         set nonu
+"     else
+"         set mouse=a
+"         set nu
+"     endif
+" endfunction
+" nnoremap <leader>m :call ToggleMouse()<CR>
