@@ -36,7 +36,7 @@ You'll also probably want ctags installed. On Ubuntu, you can do:
 
 ## Color Schemes
 
-The default color scheme is [Smyck](https://github.com/hukl/Smyck-Color-Scheme/), which looks best with the corresponding terminal theme installed as well.
+The default color scheme is Slate, which comes with MacVim.
 
 Other available (awesome) colorschemes:
 
@@ -47,7 +47,9 @@ Other available (awesome) colorschemes:
 
 ## Font
 
-Using one of the following fonts is recommended: https://github.com/Lokaltog/powerline-fonts. Right now, I use Inconsolata. On iTerm2, you may have to make the size of "Non-ASCII Font" smaller than the size of "Regular Font" in order to ensure everything lines up.
+These fonts are available: https://github.com/Lokaltog/powerline-fonts.
+
+I personally like Monaco, size 13, because it helps my eyes not die while coding.
 
 ## Shortcuts
 
@@ -59,7 +61,6 @@ Using one of the following fonts is recommended: https://github.com/Lokaltog/pow
 * ,e: open file in new tab
 * ,l: toggle NERDTree
 * ,h: open a shell in a new tab
-* ,k: syntax-check the current file
 * ,m: toggle mouse support
 * ,p: toggle paste mode
 * ,o: open file
