@@ -32,6 +32,12 @@
 set encoding=utf-8
 set nocompatible
 
+" undo power
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
 " vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -73,6 +79,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'fatih/vim-go'
 Plugin 'guns/vim-clojure-static'
+Plugin 'rhysd/vim-crystal'
+Plugin 'slim-template/vim-slim'
 
 call vundle#end()
 filetype plugin indent on
