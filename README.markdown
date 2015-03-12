@@ -53,7 +53,7 @@ Other available (awesome) colorschemes:
 
 These fonts are available: https://github.com/Lokaltog/powerline-fonts.
 
-I personally like Monaco, size 13, because it helps my eyes not die while coding.
+I personally like Monaco, size 13.
 
 ## Shortcuts
 
