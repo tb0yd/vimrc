@@ -30,6 +30,10 @@ Now you can install the vimrc:
     ruby extconf.rb
     make
 
+Don't forget to create the undo directory:
+
+    mkdir ~/.vim/undo
+
 You'll also probably want ctags installed. On Ubuntu, you can do:
 
     sudo apt-get install ctags
